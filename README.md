@@ -1,1 +1,1 @@
-# devops-netologyРедактирую readme
+Для Terraform будут проигнорированы файлы: локальные директории Terraform `**/.terraform/*`, tfstate файлы `*.tfstate, *.tfstate.*`, логи crash `crash.log`, файлы с расширением tfvars `*.tfvars`,  `override.tf, override.tf.json`, файлы содержащие в имени `_override.tf, _override.tf.json`. Также будут проигнорированы файлы конфигураций консоли: `.terraformrc, terraform.rc`
