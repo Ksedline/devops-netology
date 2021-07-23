@@ -10,7 +10,7 @@
 
 ## Ответы
 
-1. Ответ
+### 1. Ответ
 
   Хеш: ```aefead2207ef7e2aa5dc81a34aedf0cad4c32545```
 
@@ -21,7 +21,7 @@
   git show aefea --pretty=oneline
   ```
 
-2. Ответ
+### 2. Ответ
    
   Тег: ```v0.12.23```
 
@@ -30,7 +30,7 @@
   git tag --points-at 85024d3
   ```
   
-3. Ответ
+### 3. Ответ
    
   Хеши: ```56cd7859e05c36c06b56d013b55a252d0bb7e158```, ```9ea88f22fc6269854151c571162c5bcf958bee2b```
 
@@ -39,7 +39,7 @@
   git cat-file -p b8d720f
   ```
 
-4. Ответ
+### 4. Ответ
   
   ```
   33ff1c03bb960b332be3af2e333462dde88b279e v0.12.24
@@ -75,7 +75,7 @@
   git log --pretty=format:"%H %B" v0.12.23..v0.12.24
   ```
 
-5. Ответ
+### 5. Ответ
    
   Коммит: ```8c928e83589d90a031f811fae52a81be7153e82f```
 
@@ -84,7 +84,7 @@
   git log -S "func providerSource" --pretty=format:"%H, %an, %ad, %s" --reverse | head -n 1
   ```
 
-6. Ответ
+### 6. Ответ
 
   Коммиты: ```35a058fb3ddfae9cfee0b3893822c9a95b920f4c```, ```c0b17610965450a89598da491ce9b6b5cbd6393f```, ```8364383c359a6b738a436d1b7745ccdce178df47```
 
@@ -93,11 +93,11 @@
   git log -S "globalPluginDirs" --pretty=oneline
   ```
 
-7. Ответ
+### 7. Ответ
 
-   Автор: ```Martin Atkins```
+  Автор: ```Martin Atkins```
    
-   Команда:
-   ```bash
-   git log -S "func synchronizedWriters" --pretty=format:"%an" --reverse | head -n 1 
-   ```
+  Команда:
+  ```bash
+  git log -S "func synchronizedWriters" --pretty=format:"%an" --reverse | head -n 1 
+  ```
