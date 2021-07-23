@@ -1,95 +1,101 @@
-Для Terraform будут проигнорированы файлы: локальные директории Terraform `**/.terraform/*`, tfstate файлы `*.tfstate, *.tfstate.*`, логи crash `crash.log`, файлы с расширением tfvars `*.tfvars`,  `override.tf, override.tf.json`, файлы содержащие в имени `_override.tf, _override.tf.json`. Также будут проигнорированы файлы конфигураций консоли: `.terraformrc, terraform.rc`
+## Вопросы
 
+1. Найдите полный хеш и комментарий коммита, хеш которого начинается на aefea.
+2. Какому тегу соответствует коммит 85024d3?
+3. Сколько родителей у коммита b8d720? Напишите их хеши.
+4. Перечислите хеши и комментарии всех коммитов которые были сделаны между тегами v0.12.23 и v0.12.24.
+5. Найдите коммит в котором была создана функция func providerSource, ее определение в коде выглядит так func providerSource(...) (вместо троеточего перечислены аргументы).
+6. Найдите все коммиты в которых была изменена функция globalPluginDirs.
+7. Кто автор функции synchronizedWriters?
 
-## Результат комманды ```git log >> README.md```:
+## Ответы
 
-commit 039b4490a50b36c806dc2423df161c2124c7c802
-Author: Шеховцов Кирилл <ksedline@gmail.com>
-Date:   Wed Jul 21 14:42:03 2021 +0300
+1. Ответ
 
-    Merge branch 'git-merge'
+  Хеш: ```aefead2207ef7e2aa5dc81a34aedf0cad4c32545```
 
-commit fafe6a626adc5d3929e3ac878048ee29c5c748de
-Merge: 6b471a5 5f57359
-Author: Шеховцов Кирилл <ksedline@gmail.com>
-Date:   Wed Jul 21 14:46:26 2021 +0300
+  Комментарий: ```Update CHANGELOG.md```
 
-    Merge branch 'git-merge'
+  Команда:
+  ```bash
+  git show aefea --pretty=oneline
+  ```
 
-commit 6b471a5074f65ef401eed87c307dfef978d9a065
-Author: Шеховцов Кирилл <ksedline@gmail.com>
-Date:   Wed Jul 21 14:39:03 2021 +0300
+2. Ответ
+   
+    Тег: ```v0.12.23```
 
-    rebase: update
+    Команда:
+    ```bash
+    git tag --points-at 85024d3
+    ```
+3. Ответ
+   
+    Хеши: ```56cd7859e05c36c06b56d013b55a252d0bb7e158```, ```9ea88f22fc6269854151c571162c5bcf958bee2b```
 
-commit 5f573591c18c2c8301b9eb2993b1b99d8cf8db62
-Author: Шеховцов Кирилл <ksedline@gmail.com>
-Date:   Wed Jul 21 14:37:31 2021 +0300
+    Команда:
+    ```bash
+    git cat-file -p b8d720f
+    ```
+4. Ответ
+  
+  ```
+  33ff1c03bb960b332be3af2e333462dde88b279e v0.12.24
 
-    merge: use shift
+  b14b74c4939dcab573326f4e3ee2a62e23e12f89 [Website] vmc provider links
 
-commit 36574e4cf869e3557d41134bfc8fa69c036d01cd
-Author: Шеховцов Кирилл <ksedline@gmail.com>
-Date:   Wed Jul 21 14:35:51 2021 +0300
+  3f235065b9347a758efadc92295b540ee0a5e26e Update CHANGELOG.md
 
-    merge: @ instead *
+  6ae64e247b332925b872447e9ce869657281c2bf registry: Fix panic when server is unreachable
 
-commit 8723335e214b92475976434eb29b92dbdbb2b88d
-Author: Шеховцов Кирилл <ksedline@gmail.com>
-Date:   Wed Jul 21 14:32:36 2021 +0300
+  Non-HTTP errors previously resulted in a panic due to dereferencing the
+  resp pointer while it was nil, as part of rendering the error message.
+  This commit changes the error message formatting to cope with a nil
+  response, and extends test coverage.
 
-    prepare for merge and rebase
+  Fixes #24384
 
-commit 6ede022ded0cd63f61dc79029b60d0a06bab85fa
-Author: Шеховцов Кирилл <ksedline@gmail.com>
-Date:   Sat Jul 17 12:34:37 2021 +0300
+  5c619ca1baf2e21a155fcdb4c264cc9e24a2a353 website: Remove links to the getting started guide's old location
 
-    Commit made with gui
+  Since these links were in the soon-to-be-deprecated 0.11 language section, I
+  think we can just remove them without needing to find an equivalent link.
 
-commit 272dfe8269997efac9a576681104bd56ce6555d7
-Author: Kirill Shekhovtsov <30693707+Ksedline@users.noreply.github.com>
-Date:   Mon Jul 12 11:36:36 2021 +0300
+  06275647e2b53d97d4f0a19a0fec11f6d69820b5 Update CHANGELOG.md
+  d5f9411f5108260320064349b757f55c09bc4b80 command: Fix bug when using terraform login on Windows
 
-    Update README.md
+  4b6d06cc5dcb78af637bbb19c198faff37a066ed Update CHANGELOG.md
+  dd01a35078f040ca984cdd349f18d0b67e486c35 Update CHANGELOG.md
+  225466bc3e5f35baa5d07197bbc079345b77525e Cleanup after v0.12.23 release
+  ```
 
-commit 3a0360b9cc5fd1f2c53c5e03ffe41ee46ddbd873
-Author: Шеховцов Кирилл <ksedline@gmail.com>
-Date:   Mon Jul 12 11:20:35 2021 +0300
+  Команда:
+  ```bash
+  git log --pretty=format:"%H %B" v0.12.23..v0.12.24
+  ```
 
-    Forget to add has_been_moved.txt
+5. Ответ
+   
+  Коммит: ```8c928e83589d90a031f811fae52a81be7153e82f```
 
-commit baa19ccafe6a23fa6a53ce77849a850e5f6367c8
-Author: Шеховцов Кирилл <ksedline@gmail.com>
-Date:   Mon Jul 12 11:18:57 2021 +0300
+  Команда:
+  ```bash
+  git log -S "func providerSource" --pretty=format:"%H, %an, %ad, %s" --reverse | head -n 1
+  ```
 
-    Moved and deleted
+6. Ответ
 
-commit 93a8b0c72b3c33253d12bfb32b85d8fe6f6f12bf
-Author: Шеховцов Кирилл <ksedline@gmail.com>
-Date:   Mon Jul 12 11:16:01 2021 +0300
+  Коммиты: ```35a058fb3ddfae9cfee0b3893822c9a95b920f4c```, ```c0b17610965450a89598da491ce9b6b5cbd6393f```, ```8364383c359a6b738a436d1b7745ccdce178df47```
 
-    Prepare to delete and move
+  Команда:
+  ```bash
+  git log -S "globalPluginDirs" --pretty=oneline
+  ```
 
-commit 744723de09fef31cffeca4dbfb73654875400f96
-Author: Шеховцов Кирилл <ksedline@gmail.com>
-Date:   Mon Jul 12 11:14:42 2021 +0300
+7. Ответ
 
-    Added gitignore
-
-commit f00b4c438fac04147c0b597737b3a2ae042384a8
-Author: Шеховцов Кирилл <ksedline@gmail.com>
-Date:   Mon Jul 12 11:12:07 2021 +0300
-
-    Second commit
-
-commit 048a42a3400c44b3788e59d32e686f0d5fe7f7ad
-Author: Шеховцов Кирилл <ksedline@gmail.com>
-Date:   Mon Jul 12 11:10:36 2021 +0300
-
-    First commit
-
-commit c49072abc8e06a1b48afb30385f9a28da93708be
-Author: Kirill Shekhovtsov <30693707+Ksedline@users.noreply.github.com>
-Date:   Mon Jul 12 11:04:41 2021 +0300
-
-    Initial commit
+   Автор: ```Martin Atkins```
+   
+   Команда:
+   ```bash
+   git log -S "func synchronizedWriters" --pretty=format:"%an" --reverse | head -n 1 
+   ```
