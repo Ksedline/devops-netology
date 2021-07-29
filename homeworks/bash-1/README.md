@@ -109,5 +109,19 @@ done
 
 Для этого нужно создать файл ```commit-msg``` в директории ```.git/hooks```
 
+Код: 
 
+```bash
+#!/bin/bash
+if ! grep -iqE "^\[04-script-01-bash\]" "$1"; then
+  echo "commit should start with [04-script-01-bash]" >&2
+  exit 1
+else
+  count=$(wc -m "$1" | awk '{print $1}')
+  if (($count > 30)); then
+    echo "length of commit should be less or 30 symbols" >&2
+    exit 1
+  fi
+fi
+```
 
