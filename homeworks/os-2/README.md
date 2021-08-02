@@ -27,7 +27,7 @@ $ nano node-exporter.service
 Description=Node Exporter
  
 [Service]
-ExecStart=/home/vagrant/node_exporter-1.2.0.linux-amd64/node_exporter ${OPTION_1} ${OOPTION_2}
+ExecStart=/home/vagrant/node_exporter-1.2.0.linux-amd64/node_exporter ${OPTION_1} ${OPTION_2}
 EnvironmentFile=/home/vagrant/node_exporter/env
  
 [Install]
