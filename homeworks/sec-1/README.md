@@ -6,7 +6,7 @@
 3. Используя [PKI Secrets Engine](https://www.vaultproject.io/docs/secrets/pki), создайте Root CA и Intermediate CA.
 Обратите внимание на [дополнительные материалы](https://learn.hashicorp.com/tutorials/vault/pki-engine) по созданию CA в Vault, если с изначальной инструкцией возникнут сложности.
 
-Реализовал через UI:
+Реализовал через UI, файлики в директории с README:
 
 ![1](1.png)
 ![2](2.png)
