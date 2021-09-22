@@ -97,7 +97,7 @@ https://hub.docker.com/repository/docker/ksedline/ksedline-httpd
   
   ```bash
   # docker exec -ti centos1 bash
-  [root@d3b0da9df6e8 /]# echo Netology > /share/info/first
+  [root@d3b0da9df6e8 /]# echo Netology1 > /share/info/first
   [root@d3b0da9df6e8 /]# exit
   ```
 
