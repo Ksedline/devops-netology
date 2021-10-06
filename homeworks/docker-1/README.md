@@ -118,7 +118,7 @@ https://hub.docker.com/repository/docker/ksedline/ksedline-httpd
   -rw-r--r-- 1 root root    9 Sep  21 20:49 first
   -rw-r--r-- 1 root root   10 Sep  21 20:52 second
   root@490e7gba591a:/# cat /info/first
-  Netology
+  Netology1
   root@490e7gba591a:/# cat /info/second
   Netology2
   root@490e7gba591a:/# exit
