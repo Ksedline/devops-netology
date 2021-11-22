@@ -33,9 +33,9 @@
 
 ## Ответ:
 
-- Файл [Dockerfile](/Dockerfile)
+- Файл [Dockerfile](https://github.com/Ksedline/devops-netology/blob/main/homeworks/elastic-1/Dockerfile)
  
-- Файл [elasticsearch.yml](/elasticsearch.yml)
+- Файл [elasticsearch.yml](https://github.com/Ksedline/devops-netology/blob/main/homeworks/elastic-1/elasticsearch.yml)
 
 - Образ docker.io: https://hub.docker.com/r/ksedline/elasticsearch/tags
 
