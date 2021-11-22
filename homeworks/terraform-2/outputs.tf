@@ -13,7 +13,7 @@ output "caller_arn" {
 output "region" {
   value = data.aws_region.current.name
 }
-# Приватный IP ec2 инстансы
+
 output "private_ip" {
   value = aws_instance.netology_test.*.private_ip
 }
